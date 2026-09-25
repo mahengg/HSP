@@ -6,10 +6,12 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Logo />
+
         <nav className="desktop-nav" aria-label="Main navigation">
           <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
           <Link href="/inquiry">Inquiry</Link>
+
           <Link href="/inquiry" className="button button-small">
             Start a Conversation
           </Link>
@@ -21,10 +23,12 @@ export default function Header() {
             <span />
             <span />
           </summary>
+
           <nav aria-label="Mobile navigation">
             <Link href="/">Home</Link>
             <Link href="/services">Services</Link>
             <Link href="/inquiry">Inquiry</Link>
+
             <Link href="/inquiry" className="button">
               Start a Conversation
             </Link>

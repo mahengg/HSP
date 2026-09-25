@@ -2,8 +2,14 @@ export const site = {
   name: "Heartland Strategy Partners",
   shortName: "HSP",
   location: "Kansas City, Missouri",
-  email: "hello@yourdomain.com",
-  phone: "(816) 555-0000",
+  email: "mhenggeler11@gmail.com",
+  phone: "+1 (816) 914-5308",
+
+  mission:
+    "Our mission is to help organizations across Kansas City turn collaborative planning into practical strategies that strengthen communities and create meaningful, lasting impact.",
+
+  tagline:
+    "Collaborative Planning. Practical Strategy. Meaningful Impact.",
 };
 
 export type OrganizationKey =
@@ -85,6 +91,7 @@ export const organizations: Organization[] = [
       },
     ],
   },
+
   {
     key: "churches",
     title: "Churches",
@@ -142,6 +149,7 @@ export const organizations: Organization[] = [
       },
     ],
   },
+
   {
     key: "boards",
     title: "Nonprofit Boards",
@@ -199,6 +207,7 @@ export const organizations: Organization[] = [
       },
     ],
   },
+
   {
     key: "public-health",
     title: "Public Health",

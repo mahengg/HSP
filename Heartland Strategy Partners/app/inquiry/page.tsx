@@ -14,12 +14,18 @@ export default function InquiryPage() {
     <>
       <section className="page-hero">
         <div className="container narrow">
-          <p className="eyebrow">Inquiry</p>
-          <h1>Start with what you know.</h1>
+          <p className="eyebrow">
+            Inquiry
+          </p>
+
+          <h1>
+            Start with what you know.
+          </h1>
+
           <p>
             Tell us a little about your organization and what you&apos;re
-            working through. We&apos;ll use the information below to understand
-            the project before following up.
+            working through. You do not need to have every detail figured out
+            before reaching out.
           </p>
         </div>
       </section>
@@ -27,32 +33,64 @@ export default function InquiryPage() {
       <section className="section inquiry-section">
         <div className="container inquiry-layout">
           <aside className="contact-panel">
-            <p className="eyebrow">Contact</p>
-            <h2>Let&apos;s talk about what comes next.</h2>
+            <p className="eyebrow">
+              Contact
+            </p>
+
+            <h2>
+              Let&apos;s talk about what comes next.
+            </h2>
+
             <p>
-              You do not need to have every detail figured out before reaching
-              out. Share what you know, and we can start from there.
+              Share what you know about your organization, project, or
+              challenge. Heartland Strategy Partners can help determine the
+              type of support that makes the most sense.
             </p>
 
             <div className="contact-list">
               <div>
-                <span>Email</span>
-                <a href={`mailto:${site.email}`}>{site.email}</a>
-              </div>
-              <div>
-                <span>Phone</span>
-                <a href={`tel:${site.phone.replace(/\D/g, "")}`}>
-                  {site.phone}
+                <span>
+                  Email
+                </span>
+
+                <a href={`mailto:${site.email}`}>
+                  {site.email}
                 </a>
               </div>
+
+              {site.phone && (
+                <div>
+                  <span>
+                    Phone
+                  </span>
+
+                  <a
+                    href={`tel:${site.phone.replace(/\D/g, "")}`}
+                  >
+                    {site.phone}
+                  </a>
+                </div>
+              )}
+
               <div>
-                <span>Location</span>
-                <strong>{site.location}</strong>
+                <span>
+                  Location
+                </span>
+
+                <strong>
+                  {site.location}
+                </strong>
               </div>
             </div>
           </aside>
 
-          <Suspense fallback={<div className="inquiry-form">Loading form…</div>}>
+          <Suspense
+            fallback={
+              <div className="inquiry-form">
+                Loading form…
+              </div>
+            }
+          >
             <InquiryForm />
           </Suspense>
         </div>

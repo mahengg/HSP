@@ -1061,3 +1061,99 @@ textarea {
     flex-direction: column;
   }
 }
+
+/* =========================================
+   HEARTLAND OFFICIAL LOGO
+========================================= */
+
+.brand-image {
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.site-logo {
+  display: block;
+  width: 285px;
+  height: auto;
+  object-fit: contain;
+}
+
+.site-header .brand-image {
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   HEADER ADJUSTMENTS FOR WIDE LOGO
+========================================= */
+
+.header-inner {
+  min-height: 100px;
+}
+
+.desktop-nav {
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   FOOTER LOGO
+========================================= */
+
+.footer .site-logo {
+  width: 310px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.footer .brand-image {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.footer-tagline {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.83rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.footer-copy {
+  max-width: 520px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+  .site-logo {
+    width: 235px;
+  }
+
+  .header-inner {
+    min-height: 88px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-logo {
+    width: 190px;
+  }
+
+  .header-inner {
+    min-height: 82px;
+  }
+
+  .footer .site-logo {
+    width: 250px;
+  }
+}

@@ -6,16 +6,21 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-grid">
-        <div>
+        <div className="footer-brand">
           <Logo />
+
+          <p className="footer-tagline">{site.tagline}</p>
+
           <p className="footer-copy">
-            Thoughtful strategy and practical support for organizations serving
-            their communities.
+            Helping organizations turn collaborative planning into practical
+            strategies that strengthen communities and create meaningful,
+            lasting impact.
           </p>
         </div>
 
         <div>
           <h3>Navigate</h3>
+
           <div className="footer-links">
             <Link href="/">Home</Link>
             <Link href="/services">Services</Link>
@@ -25,17 +30,29 @@ export default function Footer() {
 
         <div>
           <h3>Contact</h3>
+
           <div className="footer-links">
-            <a href={`mailto:${site.email}`}>{site.email}</a>
-            <a href={`tel:${site.phone.replace(/\D/g, "")}`}>{site.phone}</a>
+            <a href={`mailto:${site.email}`}>
+              {site.email}
+            </a>
+
+            {site.phone && (
+              <a href={`tel:${site.phone.replace(/\D/g, "")}`}>
+                {site.phone}
+              </a>
+            )}
+
             <span>{site.location}</span>
           </div>
         </div>
       </div>
 
       <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} {site.name}. All rights reserved.</span>
-        <span>Kansas City, Missouri</span>
+        <span>
+          © {new Date().getFullYear()} {site.name}. All rights reserved.
+        </span>
+
+        <span>{site.location}</span>
       </div>
     </footer>
   );
