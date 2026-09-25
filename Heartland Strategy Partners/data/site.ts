@@ -45,7 +45,7 @@ export const organizations: Organization[] = [
         name: "Development Strategy",
         description:
           "Build a focused plan for growth, fundraising priorities, partnerships, or program expansion.",
-        price: "Starting at $1,500",
+        price: "Starting at $2,000",
         bullets: [
           "Strategic planning",
           "Development roadmaps",
