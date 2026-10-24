@@ -5,14 +5,14 @@ export default function Logo() {
   return (
     <Link
       href="/"
-      className="brand brand-image"
+      className="brand-logo"
       aria-label="Heartland Strategy Partners home"
     >
       <Image
         src="/heartland-logo.png"
         alt="Heartland Strategy Partners"
-        width={360}
-        height={130}
+        width={420}
+        height={170}
         priority
         className="site-logo"
       />

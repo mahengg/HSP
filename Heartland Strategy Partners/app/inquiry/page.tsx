@@ -1,76 +1,80 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
+
 import InquiryForm from "@/components/InquiryForm";
+
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Inquiry",
+  title:
+    "Inquiry | Heartland Strategy Partners",
+
   description:
-    "Start a conversation with Heartland Strategy Partners about your organization, project, or consulting needs.",
+    "Start a conversation with Heartland Strategy Partners.",
 };
 
 export default function InquiryPage() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container narrow">
+      <section className="page-hero inquiry-hero">
+        <div className="container">
           <p className="eyebrow">
-            Inquiry
+            Start a Conversation
           </p>
 
           <h1>
-            Start with what you know.
+            Let’s talk about what comes next.
           </h1>
 
-          <p>
-            Tell us a little about your organization and what you&apos;re
-            working through. You do not need to have every detail figured out
-            before reaching out.
+          <p className="page-hero-copy">
+            Share what you know about your
+            organization, project, or
+            challenge. We’ll help determine
+            the support that makes the most
+            sense.
           </p>
         </div>
       </section>
 
-      <section className="section inquiry-section">
+      <section className="section section-soft">
         <div className="container inquiry-layout">
           <aside className="contact-panel">
-            <p className="eyebrow">
-              Contact
-            </p>
-
             <h2>
-              Let&apos;s talk about what comes next.
+              Let’s talk about what comes
+              next.
             </h2>
 
             <p>
-              Share what you know about your organization, project, or
-              challenge. Heartland Strategy Partners can help determine the
-              type of support that makes the most sense.
+              Share what you know about your
+              organization, project, or
+              challenge. We’ll help determine
+              the support that makes the most
+              sense.
             </p>
 
-            <div className="contact-list">
+            <div className="contact-details">
               <div>
                 <span>
                   Email
                 </span>
 
-                <a href={`mailto:${site.email}`}>
+                <a
+                  href={`mailto:${site.email}`}
+                >
                   {site.email}
                 </a>
               </div>
 
-              {site.phone && (
-                <div>
-                  <span>
-                    Phone
-                  </span>
+              <div>
+                <span>
+                  Phone
+                </span>
 
-                  <a
-                    href={`tel:${site.phone.replace(/\D/g, "")}`}
-                  >
-                    {site.phone}
-                  </a>
-                </div>
-              )}
+                <a
+                  href={`tel:${site.phoneHref}`}
+                >
+                  {site.phone}
+                </a>
+              </div>
 
               <div>
                 <span>
@@ -84,15 +88,7 @@ export default function InquiryPage() {
             </div>
           </aside>
 
-          <Suspense
-            fallback={
-              <div className="inquiry-form">
-                Loading form…
-              </div>
-            }
-          >
-            <InquiryForm />
-          </Suspense>
+          <InquiryForm />
         </div>
       </section>
     </>
