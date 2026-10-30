@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-
+import { Suspense } from "react";
 import InquiryForm from "@/components/InquiryForm";
 
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title:
-    "Inquiry | Heartland Strategy Partners",
+  title: "Inquiry",
 
   description:
     "Start a conversation with Heartland Strategy Partners.",
@@ -88,7 +87,15 @@ export default function InquiryPage() {
             </div>
           </aside>
 
-          <InquiryForm />
+          <Suspense
+            fallback={
+              <div className="inquiry-form">
+                <p>Loading inquiry form...</p>
+              </div>
+            }
+          >
+            <InquiryForm />
+          </Suspense>
         </div>
       </section>
     </>

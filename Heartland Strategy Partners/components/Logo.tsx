@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import logo from "@/public/heartland-logo.png";
+
 export default function Logo() {
   return (
     <Link
@@ -9,10 +11,8 @@ export default function Logo() {
       aria-label="Heartland Strategy Partners home"
     >
       <Image
-        src="/heartland-logo.png"
+        src={logo}
         alt="Heartland Strategy Partners"
-        width={420}
-        height={170}
         priority
         className="site-logo"
       />
