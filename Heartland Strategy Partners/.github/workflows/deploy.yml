@@ -22,7 +22,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: "Heartland Strategy Partners"
+        working-directory: "Heartland Strategy Partners/package-lock.json"
 
     steps:
       - name: Checkout repository
